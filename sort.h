@@ -23,4 +23,10 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
 
+/** Selection Sort */
+void selection_sort(int *array, size_t size);
+int find_minimum_index(const int *array, int start, size_t size);
+void swap(int *first_element, int *second_element);
+
+
 #endif /* SORT_H */
