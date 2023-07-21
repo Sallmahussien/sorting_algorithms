@@ -55,4 +55,9 @@ void shell_sort(int *array, size_t size);
 int less(int first, int second);
 int compare_to(int first, int second);
 
+/** Counting Sort */
+void counting_sort(int *array, size_t size);
+int *generate_count_array(int k, int *array, size_t size);
+int get_max(int *array, size_t size);
+
 #endif /* SORT_H */
