@@ -36,11 +36,11 @@ void print_list(const listint_t *list);
 /** Swap two element for sorting arrays*/
 void swap(int *first_element, int *second_element);
 
+/** Bubble Sort*/
+void bubble_sort(int *array, size_t size);
+
 /** Selection Sort */
 void selection_sort(int *array, size_t size);
 int find_minimum_index(const int *array, int start, size_t size);
-
-/** Bubble Sort*/
-void bubble_sort(int *array, size_t size);
 
 #endif /* SORT_H */
