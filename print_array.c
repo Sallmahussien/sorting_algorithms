@@ -20,15 +20,3 @@ void print_array(const int *array, size_t size)
 	}
 	printf("\n");
 }
-
-/**
- * swap - exchange two elements
- * @first_element: first one
- * @second_element: second one
- */
-void swap(int *first_element, int *second_element)
-{
-	int temp = *first_element;
-	*first_element = *second_element;
-	*second_element = temp;
-}

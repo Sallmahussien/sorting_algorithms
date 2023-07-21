@@ -41,3 +41,15 @@ int find_minimum_index(const int *array, int start, size_t size)
 
 	return (min_idx);
 }
+
+/**
+ * swap - exchange two elements
+ * @first_element: first one
+ * @second_element: second one
+ */
+void swap(int *first_element, int *second_element)
+{
+	int temp = *first_element;
+	*first_element = *second_element;
+	*second_element = temp;
+}
