@@ -37,10 +37,11 @@ void print_list(const listint_t *list);
 void swap(int *first_element, int *second_element);
 
 /** Swap two element for sorting linked lists*/
-void swap_nodes(listint_t **list, listint_t  *current_node, listint_t *prev_node);
+void swap_nodes(listint_t **list, listint_t *curr_node, listint_t *prev_node);
 
 /** Insertion Sort*/
 void insertion_sort_list(listint_t **list);
+bool is_small_list(listint_t **list);
 
 /** Bubble Sort*/
 void bubble_sort(int *array, size_t size);
