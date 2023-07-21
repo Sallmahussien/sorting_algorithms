@@ -50,4 +50,9 @@ void bubble_sort(int *array, size_t size);
 void selection_sort(int *array, size_t size);
 int find_minimum_index(const int *array, int start, size_t size);
 
+/** Shell Sort */
+void shell_sort(int *array, size_t size);
+int less(int first, int second);
+int compare_to(int first, int second);
+
 #endif /* SORT_H */
