@@ -29,6 +29,8 @@ void swap_nodes(listint_t **list, listint_t  *curr_node, listint_t *prev_node)
  */
 bool is_small_list(listint_t **list)
 {
+	if (!(*list)->next)
+		return (true);
 	if (!(*list)->next->next)
 		return (true);
 
@@ -44,7 +46,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t  *current_node = (*list)->next;
 	listint_t *prev_node;
 
-	if (!list || is_small_list(list))
+	if (!list || !*list || is_small_list(list))
 		return;
 
 	while (current_node)
