@@ -17,13 +17,13 @@ void counting_sort(int *array, size_t size)
 	count = generate_count_array(max, array, size);
 	final_array = malloc(sizeof(int) * size);
 
+	print_array(count, max + 1);
+
 	for (idx = size - 1; idx >= 0; idx--)
 		final_array[--count[array[idx]]] = array[idx];
 
 	for (idx = 0; idx < (int)size; idx++)
 		array[idx] = final_array[idx];
-
-	print_array(count, max + 1);
 
 	free(count);
 	free(final_array);
