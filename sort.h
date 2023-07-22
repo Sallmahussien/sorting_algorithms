@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_DIGIT 10
+
 /**
  * enum bool_t - Represents boolean values true and false.
  * @false: Represents the boolean value false, which has the value 0.
@@ -57,11 +59,16 @@ int compare_to(int first, int second);
 
 /** Counting Sort */
 void counting_sort(int *array, size_t size);
-int *generate_count_array(int k, int *array, size_t size);
-int get_max(int *array, size_t size);
+int *generate_count_array(int k, const int *array, size_t size);
+int get_max(const int *array, size_t size);
 
+/** Quick Sort (Lumoto) */
 void quick_sort(int *array, size_t size);
 void quick_sort_array(int *array, int low, int high, size_t size);
 int partition(int *array, int low, int high, size_t size);
+
+/** Radix Sort */
+void radix_sort(int *array, size_t size);
+void generalized_count_sort(int *array, int exp, size_t size);
 
 #endif /* SORT_H */
