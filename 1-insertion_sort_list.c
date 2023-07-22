@@ -9,20 +9,17 @@ void insertion_sort_list(listint_t **list)
 	listint_t  *current_node = (*list)->next;
 	listint_t *prev_node;
 
-	if (!list || !*list || is_small_list(list))
+	if (!(*list) || is_small_list(list))
 		return;
 
 	while (current_node)
 	{
 		prev_node = current_node->prev;
-		while (prev_node)
+		while (prev_node && current_node->n < prev_node->n)
 		{
-			if (current_node->n < prev_node->n)
-			{
-				swap_nodes(&(*list), current_node, prev_node);
-				print_list(*list);
-			}
-			prev_node = prev_node->prev;
+			swap_nodes(&(*list), current_node, prev_node);
+			print_list(*list);
+			prev_node = current_node->prev;
 		}
 		current_node = current_node->next;
 	}
