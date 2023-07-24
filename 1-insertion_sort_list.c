@@ -9,7 +9,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t  *current_node = (*list)->next;
 	listint_t *next_node;
 
-	if (!list || !(*list) || is_small_list(list))
+	if (!(*list) || is_small_list(list))
 		return;
 
 	while (current_node)
