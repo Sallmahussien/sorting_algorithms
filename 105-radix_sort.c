@@ -5,7 +5,8 @@
  * @array: array to be sorted
  * @size: array size
  */
-void radix_sort(int *array, size_t size) {
+void radix_sort(int *array, size_t size)
+{
 	int exponent, max = get_max(array, size);
 
 	if (!array || size < 2)
@@ -46,6 +47,7 @@ void generalized_count_sort(int *array, int exp, size_t size)
 	int i;
 	int count[MAX_DIGIT] = {0};
 	int *output = malloc(sizeof(int) * size);
+
 	if (!output)
 		return;
 
