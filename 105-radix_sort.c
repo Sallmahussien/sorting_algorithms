@@ -5,15 +5,17 @@
  * @array: array to be sorted
  * @size: array size
  */
-void radix_sort(int *array, size_t size)
-{
+void radix_sort(int *array, size_t size) {
 	int exponent, max = get_max(array, size);
 
 	if (!array || size < 2)
 		return;
 
 	for (exponent = 1; max / exponent; exponent *= 10)
+	{
 		generalized_count_sort(array, exponent, size);
+		print_array(array, size);
+	}
 }
 
 /**
@@ -44,6 +46,8 @@ void generalized_count_sort(int *array, int exp, size_t size)
 	int i;
 	int count[MAX_DIGIT] = {0};
 	int *output = malloc(sizeof(int) * size);
+	if (!output)
+		return;
 
 	for (i = 0; i < (int) size; i++)
 		count[(array[i] / exp) % 10]++;
@@ -56,8 +60,6 @@ void generalized_count_sort(int *array, int exp, size_t size)
 
 	for (i = 0; i < (int) size; i++)
 		array[i] = output[i];
-
-	print_array(array, size);
 
 	free(output);
 }
