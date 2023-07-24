@@ -76,5 +76,10 @@ void cocktail_sort_list(listint_t **list);
 listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end);
 listint_t *swap_backward(listint_t **list, listint_t *start, listint_t *end);
 
+/** Merge Sort*/
+void merge_sort(int *array, size_t size);
+void top_down_split(int *array, int *buffer, int low, int high);
+void merge_array(int *array, int *buffer, int low, int mid, int high);
+void print_sub_array(int *array, int start, int end);
 
 #endif /* SORT_H */
