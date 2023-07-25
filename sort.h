@@ -3,9 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #define MAX_DIGIT 10
-#
+#define START_INDEX 0
 
 
 /**
@@ -67,7 +68,6 @@ void cocktail_sort_list(listint_t **list);
 listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end);
 listint_t *swap_backward(listint_t **list, listint_t *start, listint_t *end);
 
-
 /** Heap Sort */
 void heap_sort(int *array, size_t size);
 void build_heap(int *array, size_t end, size_t size);
@@ -79,9 +79,10 @@ void top_down_split(int *array, int *buffer, int low, int high);
 void merge_array(int *array, int *buffer, int low, int mid, int high);
 void print_sub_array(int *array, int start, int end);
 
-/** Heap Sort */
-void heap_sort(int *array, size_t size);
-void build_heap(int *array, size_t end, size_t size);
-void heapify(int *array, int parent_idx, size_t end, size_t size);
+/** Bitonic Sort */
+void bitonic_sort(int *array, size_t size);
+void recursive_bitonic_sort
+	(int *array, int low, size_t count, size_t size, bool ascending);
+void bitonic_merge(int *array, int low, size_t count, bool ascending);
 
 #endif /* SORT_H */
