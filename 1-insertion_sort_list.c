@@ -6,21 +6,20 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t  *current_node = (*list)->next;
-	listint_t *next_node;
+	listint_t *curr_node, *prev_node;
 
-	if (!(*list) || is_small_list(list))
-		return;
-
-	while (current_node)
+	for (curr_node = (*list)->next; curr_node; curr_node = curr_node->next)
 	{
-		next_node = current_node->next;
-		while (current_node->prev && current_node->n < current_node->prev->n)
+		int data = curr_node->n;
+
+		prev_node = curr_node->prev;
+
+		while (prev_node && prev_node->n > data)
 		{
-			swap_nodes(list, current_node, current_node->prev);
+			swap_nodes(list, curr_node, prev_node);
 			print_list(*list);
+			prev_node = curr_node->prev;
 		}
-		current_node = next_node;
 	}
 }
 
