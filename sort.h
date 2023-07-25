@@ -77,4 +77,9 @@ listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end);
 listint_t *swap_backward(listint_t **list, listint_t *start, listint_t *end);
 
 
+/** Quick Sort (Hoare)*/
+void quick_sort_hoare(int *array, size_t size);
+void quick_sort_hoare_array(int *array, int low, int high, size_t size);
+int partition_hoare(int *array, int low, int high, size_t size);
+
 #endif /* SORT_H */
