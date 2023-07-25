@@ -5,17 +5,8 @@
 #include <stdlib.h>
 
 #define MAX_DIGIT 10
+#
 
-/**
- * enum bool_t - Represents boolean values true and false.
- * @false: Represents the boolean value false, which has the value 0.
- * @true: Represents the boolean value true, which has the value 1.
- */
-typedef enum bool_t
-{
-	false = 0,
-	true = 1
-} bool;
 
 /**
  * struct listint_s - Doubly linked list node
@@ -50,7 +41,7 @@ void bubble_sort(int *array, size_t size);
 
 /** Selection Sort */
 void selection_sort(int *array, size_t size);
-int find_minimum_index(const int *array, int start, size_t size);
+size_t find_minimum_index(const int *array, int start, size_t size);
 
 /** Shell Sort */
 void shell_sort(int *array, size_t size);
@@ -76,7 +67,13 @@ void cocktail_sort_list(listint_t **list);
 listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end);
 listint_t *swap_backward(listint_t **list, listint_t *start, listint_t *end);
 
-/** Merge Sort */
+
+/** Heap Sort */
+void heap_sort(int *array, size_t size);
+void build_heap(int *array, size_t end, size_t size);
+void heapify(int *array, int parent_idx, size_t end, size_t size);
+
+/** Merge Sort*/
 void merge_sort(int *array, size_t size);
 void top_down_split(int *array, int *buffer, int low, int high);
 void merge_array(int *array, int *buffer, int low, int mid, int high);

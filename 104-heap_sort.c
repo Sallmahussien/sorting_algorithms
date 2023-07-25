@@ -17,9 +17,9 @@ void heap_sort(int *array, size_t size)
 
 	for (node = (int) size - 1; node > 0; node--)
 	{
-		swap(&array[0], &array[node]);
+		swap(&array[START_INDEX], &array[node]);
 		print_array(array, size);
-		heapify(array, 0, node, size);
+		heapify(array, START_INDEX, node, size);
 	}
 }
 
