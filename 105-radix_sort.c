@@ -7,10 +7,12 @@
  */
 void radix_sort(int *array, size_t size)
 {
-	int exponent, max = get_max(array, size);
+	int exponent, max;
 
 	if (!array || size < 2)
 		return;
+
+	max = get_max(array, size);
 
 	for (exponent = 1; max / exponent; exponent *= 10)
 	{
