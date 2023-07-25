@@ -6,11 +6,13 @@
 */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *start = *list;
-	listint_t *end = NULL;
+	listint_t *start;
+	listint_t *end;
 
-	if (!(*list) || is_small_list(list))
+	if (!list || !(*list) || is_small_list(list))
 		return;
+
+	start = *list, end = NULL;
 
 	while (start->next != end)
 	{
