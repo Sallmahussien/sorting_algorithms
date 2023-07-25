@@ -85,4 +85,9 @@ void recursive_bitonic_sort
 	(int *array, int low, size_t count, size_t size, bool ascending);
 void bitonic_merge(int *array, int low, size_t count, bool ascending);
 
+/** Quick Sort (Hoare)*/
+void quick_sort_hoare(int *array, size_t size);
+void quick_sort_hoare_array(int *array, int low, int high, size_t size);
+int partition_hoare(int *array, int low, int high, size_t size);
+
 #endif /* SORT_H */
