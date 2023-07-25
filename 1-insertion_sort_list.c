@@ -8,6 +8,9 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr_node, *prev_node;
 
+	if (!list || !(*list) || is_small_list(list))
+		return;
+
 	for (curr_node = (*list)->next; curr_node; curr_node = curr_node->next)
 	{
 		int data = curr_node->n;
