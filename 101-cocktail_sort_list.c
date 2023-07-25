@@ -9,7 +9,7 @@ void cocktail_sort_list(listint_t **list)
 	listint_t *start = *list;
 	listint_t *end = NULL;
 
-	if (!(*list) || is_small_list(list))
+	if (!list || !(*list) || is_small_list(list))
 		return;
 
 	while (start->next != end)
