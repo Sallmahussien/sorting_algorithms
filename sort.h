@@ -71,15 +71,20 @@ int partition(int *array, int low, int high, size_t size);
 void radix_sort(int *array, size_t size);
 void generalized_count_sort(int *array, int exp, size_t size);
 
-/** Cocktail Shaker Sort*/
+/** Cocktail Shaker Sort */
 void cocktail_sort_list(listint_t **list);
 listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end);
 listint_t *swap_backward(listint_t **list, listint_t *start, listint_t *end);
 
-/** Merge Sort*/
+/** Merge Sort */
 void merge_sort(int *array, size_t size);
 void top_down_split(int *array, int *buffer, int low, int high);
 void merge_array(int *array, int *buffer, int low, int mid, int high);
 void print_sub_array(int *array, int start, int end);
+
+/** Heap Sort */
+void heap_sort(int *array, size_t size);
+void build_heap(int *array, size_t end, size_t size);
+void heapify(int *array, int parent_idx, size_t end, size_t size);
 
 #endif /* SORT_H */
