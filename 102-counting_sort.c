@@ -3,8 +3,8 @@
 /**
  * counting_sort - algorithm
  * @array: array to be sorted
-  *@size: array size
- */
+*@size: array size
+*/
 void counting_sort(int *array, size_t size)
 {
 	int idx, max;
@@ -19,7 +19,7 @@ void counting_sort(int *array, size_t size)
 
 	print_array(count, max + 1);
 
-	for (idx = size - 1; idx >= 0; idx--)
+	for (idx = (int) size - 1; idx >= 0; idx--)
 		final_array[--count[array[idx]]] = array[idx];
 
 	for (idx = 0; idx < (int)size; idx++)
@@ -35,7 +35,7 @@ void counting_sort(int *array, size_t size)
  * @size: array size
  * Return: max number in array
 */
-int get_max(int *array, size_t size)
+int get_max(const int *array, size_t size)
 {
 	int max = array[0], idx;
 
@@ -53,7 +53,7 @@ int get_max(int *array, size_t size)
  * @size: array size
  * Return: count array
 */
-int *generate_count_array(int max, int *array, size_t size)
+int *generate_count_array(int max, const int *array, size_t size)
 {
 	int idx;
 	int *count = malloc(sizeof(int) * (max + 1));
