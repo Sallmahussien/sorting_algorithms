@@ -45,15 +45,15 @@ void sort_deck_values(deck_node_t **decks)
 
 	for (curr_node = (*decks)->next; curr_node; curr_node = curr_node->next)
 	{
-	prev_node = curr_node->prev;
-
-	while (prev_node &&
-				 get_value(prev_node->card->value) > get_value(curr_node->card->value)
-				 && curr_node->card->kind == prev_node->card->kind)
-	{
-		swap_cards(decks, curr_node, prev_node);
 		prev_node = curr_node->prev;
-	}
+
+		while (prev_node &&
+					 get_value(prev_node->card->value) > get_value(curr_node->card->value)
+					 && curr_node->card->kind == prev_node->card->kind)
+		{
+			swap_cards(decks, curr_node, prev_node);
+			prev_node = curr_node->prev;
+		}
 	}
 }
 
@@ -64,15 +64,15 @@ void sort_deck_values(deck_node_t **decks)
  */
 int get_value(const char *card)
 {
-int i;
-char *cards[] = {"Ace", "2", "3", "4", "5", "6",
-					"7", "8", "9", "10", "Jack", "Queen", "King"};
+	int i;
+	char *cards[] = {"Ace", "2", "3", "4", "5", "6",
+						"7", "8", "9", "10", "Jack", "Queen", "King"};
 
-for (i = 0; i < 13; i++)
-	if (!strcmp(cards[i], card))
-		return (i + 1);
+	for (i = 0; i < 13; i++)
+		if (!strcmp(cards[i], card))
+			return (i + 1);
 
-return (0);
+	return (0);
 }
 
 /**
@@ -84,15 +84,15 @@ return (0);
 void swap_cards(deck_node_t **list, deck_node_t *curr_node,
 								deck_node_t *prev_node)
 {
-prev_node->next = curr_node->next;
-if (curr_node->next)
-	curr_node->next->prev = prev_node;
+	prev_node->next = curr_node->next;
+	if (curr_node->next)
+		curr_node->next->prev = prev_node;
 
-curr_node->next = prev_node;
-curr_node->prev = prev_node->prev;
-prev_node->prev = curr_node;
-if (curr_node->prev)
-	curr_node->prev->next = curr_node;
-else
-	*list = curr_node;
+	curr_node->next = prev_node;
+	curr_node->prev = prev_node->prev;
+	prev_node->prev = curr_node;
+	if (curr_node->prev)
+		curr_node->prev->next = curr_node;
+	else
+		*list = curr_node;
 }
