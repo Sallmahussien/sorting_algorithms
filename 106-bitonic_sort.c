@@ -9,7 +9,7 @@ void bitonic_sort(int *array, size_t size)
 {
 	size_t count = size;
 
-	if (!array || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
 	recursive_bitonic_sort(array, START_INDEX, count, size, true);

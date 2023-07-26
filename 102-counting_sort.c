@@ -10,7 +10,7 @@ void counting_sort(int *array, size_t size)
 	int idx, max;
 	int *count, *final_array;
 
-	if (!array || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
 	max = get_max(array, size);

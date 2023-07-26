@@ -7,10 +7,10 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	if (!array || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
-	quick_sort_array(array, 0, (int)(size - 1), size);
+	quick_sort_array(array, START_INDEX, (int)(size - 1), size);
 }
 
 /**

@@ -9,7 +9,7 @@ void merge_sort(int *array, size_t size)
 {
 	int *buffer;
 
-	if (!array || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
 	buffer = malloc(sizeof(int) * size);
@@ -38,6 +38,7 @@ void top_down_split(int *array, int *buffer, int low, int high)
 			mid = low + ((high - low) / 2);
 		else
 			mid = low + ((high - low) / 2) - 1;
+
 		top_down_split(array, buffer, low, mid);
 		top_down_split(array, buffer, mid + 1, high);
 

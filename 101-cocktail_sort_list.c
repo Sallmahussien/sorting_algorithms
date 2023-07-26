@@ -49,7 +49,7 @@ listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end)
 {
 	listint_t *current_node = start;
 	listint_t *next_node;
-	int is_swapped = 0;
+	bool is_swapped = false;
 
 	while (current_node->next != end)
 	{
@@ -59,7 +59,7 @@ listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end)
 			swap_nodes(&(*list), next_node, current_node);
 			current_node = next_node;
 			print_list(*list);
-			is_swapped = 1;
+			is_swapped = true;
 		}
 		current_node = current_node->next;
 	}
@@ -77,7 +77,7 @@ listint_t *swap_forward(listint_t **list, listint_t *start, listint_t *end)
 listint_t *swap_backward(listint_t **list, listint_t *start, listint_t *end)
 {
 	listint_t *current_node = end->prev, *prev_node;
-	int is_swapped = 0;
+	bool is_swapped = false;
 
 	while (current_node->prev && current_node != start)
 	{
@@ -87,7 +87,7 @@ listint_t *swap_backward(listint_t **list, listint_t *start, listint_t *end)
 			swap_nodes(&(*list), current_node, prev_node);
 			current_node = prev_node;
 			print_list(*list);
-			is_swapped = 1;
+			is_swapped = true;
 		}
 		current_node = current_node->prev;
 	}

@@ -7,6 +7,7 @@
 
 #define MAX_DIGIT 10
 #define START_INDEX 0
+#define MIN_SIZE 2
 
 
 /**

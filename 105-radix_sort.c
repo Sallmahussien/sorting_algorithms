@@ -9,7 +9,7 @@ void radix_sort(int *array, size_t size)
 {
 	int exponent, max;
 
-	if (!array || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
 	max = get_max(array, size);

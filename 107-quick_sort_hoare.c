@@ -7,10 +7,10 @@
  */
 void quick_sort_hoare(int *array, size_t size)
 {
-	if (!array || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
-	quick_sort_hoare_array(array, 0, size - 1, size);
+	quick_sort_hoare_array(array, START_INDEX, size - 1, size);
 }
 
 /**
@@ -45,7 +45,7 @@ int partition_hoare(int *array, int low, int high, size_t size)
 	int j = high + 1;
 	int pivot = array[high];
 
-	while (1)
+	while (true)
 	{
 		do {
 			i++;
@@ -56,9 +56,7 @@ int partition_hoare(int *array, int low, int high, size_t size)
 		} while (array[j] > pivot);
 
 		if (i > j)
-		{
 			return (j);
-		}
 
 		if (i != j)
 		{

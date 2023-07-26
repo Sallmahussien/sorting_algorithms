@@ -10,7 +10,7 @@ void heap_sort(int *array, size_t size)
 	int node;
 	size_t end = size;
 
-	if (!array || size < 2)
+	if (!array || size < MIN_SIZE)
 		return;
 
 	build_heap(array, end, size);
