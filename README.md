@@ -115,12 +115,12 @@ doubly-linked list.
     * Orders the deck from spades to diamonds and from aces to kings.
 
 ## Author
-* **Salma Hussien**
+### Salma Hussien
 - [GitHub](https://github.com/Sallmahussien)
 - [Linkedin](https://www.linkedin.com/in/salma-ahmed-a13706218/)
 - [Twitter](https://twitter.com/Sallmaahussien)
 
-* **Yousef Ahmed**
+### Yousef Ahmed
 - [GitHub](https://github.com/youssef-ahmmed)
-- [Linkedin]( https://eg.linkedin.com/in/youssef-ahmmed29)
+- [Linkedin](https://eg.linkedin.com/in/youssef-ahmmed29)
 - [Twitter](https://twitter.com/jooahmmed)
